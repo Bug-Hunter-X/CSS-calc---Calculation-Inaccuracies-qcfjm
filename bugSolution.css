@@ -1,0 +1,14 @@
+The most reliable solution is to avoid mixing percentages and fixed units within a single `calc()` expression whenever possible.  Try to break down the calculation into separate steps or use alternative layout techniques like flexbox or grid to achieve the desired layout.  For instance, you could use a combination of margin or padding to offset the element instead:
+
+```css
+.container {
+  width: 50%;
+}
+
+.element {
+  width: 50%;
+  margin-left: 10px; /* Or use padding to achieve a similar effect */
+}
+```
+
+If you absolutely must use mixed units in `calc()`, be aware of the potential inconsistencies and thoroughly test your layout across different browsers and screen sizes.  Remember to always validate your CSS and use browser developer tools to inspect the computed styles for debugging.
