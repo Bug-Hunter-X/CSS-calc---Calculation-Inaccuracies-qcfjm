@@ -1,0 +1,13 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, there's a subtle bug that can occur when using `calc()` with percentages and other units.  Consider this scenario:
+
+```css
+.container {
+  width: 50%;
+}
+
+.element {
+  width: calc(50% - 10px);
+}
+```
+
+In this example, you might expect `.element` to be 10px narrower than its parent. However, the calculation is not always performed as expected due to the order of operations and rounding issues.  The browser might first calculate 50% of the parent's width and then subtract 10px, leading to unexpected results. This is especially problematic when dealing with nested elements and complex layouts.
